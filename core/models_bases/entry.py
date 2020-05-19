@@ -59,6 +59,7 @@ class ContentEntry(models.Model):
     class Meta:
         abstract = True
 
+
 class AbstractEntry(
         BaseEntry,
         ContentEntry):
