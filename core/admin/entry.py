@@ -5,6 +5,20 @@ class EntryAdmin(admin.ModelAdmin):
     """
     Admin model for the entry object
     """
+    fieldsets = (
+        ('Content', {
+           'fields': (('title', 'status'), 'content')
+        }),
+        ('Illustration', {
+            'fields': ('image', 'image_caption'),
+            'classes': ('collapse', 'collapse-closed')
+        }),
+        ('Publication', {
+            'fields': ('publication_date', ('start_publication', 'end_publication')),
+            'classes': ('collapse', 'collapse-closed')
+        }),
+        (None, {'fields': ('slug',)}),
+    )
     date_hierarchy = 'publication_date'
     list_filter = ('publication_date', 'status')
     list_display = ('title', 'slug')

@@ -1,6 +1,11 @@
 from django.db import models
 from django.utils import timezone
+from django.template.defaultfilters import slugify
+
 from core.managers import EntryPublishedManager
+from core.setting import UPLOAD_DEST
+
+import os
 
 
 class BaseEntry(models.Model):
@@ -28,6 +33,15 @@ class BaseEntry(models.Model):
         'publication date',
         db_index=True, default=timezone.now,
         help_text="Used to build the entry's URL.")
+
+    start_publication = models.DateTimeField('start publication', db_index=True, blank=True, null=True,
+                                             help_text='Start date of publication')
+
+    end_publication = models.DateTimeField('end of publication', db_index=True, blank=True, null=True,
+                                           help_text='End date of publication')
+
+    create_date = models.DateTimeField(
+        'create date', default=timezone.now())
 
     last_update = models.DateTimeField(
         'last update date', default=timezone.now())
@@ -60,9 +74,46 @@ class ContentEntry(models.Model):
         abstract = True
 
 
+def image_upload_dispatcher(entry, filename):
+    """
+    Overriding of `` image_update `` method
+    :param entry: the instance entry
+    :param filename: the upload file's name
+    :return: the file's path
+    """
+    return entry.image_update(filename)
+
+
+class ImageEntry(models.Model):
+    """
+    Abstract image model class defined fields and methods
+    """
+    def image_update(self, filename):
+        now = timezone.now()
+        filename, extension = os.path.splitext(filename)
+
+        return os.path.join(
+            UPLOAD_DEST,
+            now.strftime('%Y'),
+            now.strftime('%m'),
+            now.strftime('%d'),
+            '%s%s' % (slugify(filename), extension)
+        )
+
+    image = models.ImageField(
+        'image', blank=True, upload_to=image_upload_dispatcher, help_text='Used to the illustration part'
+    )
+
+    image_caption = models.TextField('caption', blank=True, help_text="The image's caption")
+
+    class Meta:
+        abstract = True
+
+
 class AbstractEntry(
         BaseEntry,
-        ContentEntry):
+        ContentEntry,
+        ImageEntry):
     """
     abstract entry model class assembling
     all the abstract entry model in this class
