@@ -74,7 +74,7 @@ class ContentEntry(models.Model):
         abstract = True
 
 
-def image_upload_dispatcher(entry, filename):
+def image_upload_dispatcher(entry: str, filename: str) -> str:
     """
     Overriding of `` image_update `` method
     :param entry: the instance entry
@@ -108,6 +108,16 @@ class ImageEntry(models.Model):
 
     class Meta:
         abstract = True
+
+
+class AuthorsInfoEntry(models.Model):
+    """
+    Abstract model class for the relationship of entries and their authors
+    """
+    authors = models.ManyToManyField('smalltank.Author',
+                                     blank=True,
+                                     related_name='entries',
+                                     verbose_name='authors')
 
 
 class AbstractEntry(
