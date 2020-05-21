@@ -110,20 +110,33 @@ class ImageEntry(models.Model):
         abstract = True
 
 
-class AuthorsInfoEntry(models.Model):
+class CategoryEntry(models.Model):
     """
-    Abstract model class for the relationship of entries and their authors
+    Abstract model class for entries categorized
     """
-    authors = models.ManyToManyField('smalltank.Author',
-                                     blank=True,
-                                     related_name='entries',
-                                     verbose_name='authors')
+    categories = models.ManyToManyField('core.Category',
+                                        blank=True,
+                                        related_name='entries',
+                                        verbose_name='categories')
+
+    class Meta:
+        abstract = True
+
+# class AuthorsInfoEntry(models.Model):
+#     """
+#     Abstract model class for the relationship of entries and their authors
+#     """
+    # authors = models.ManyToManyField('smalltank.Author',
+    #                                  blank=True,
+    #                                  related_name='entries',
+    #                                  verbose_name='authors')
 
 
 class AbstractEntry(
         BaseEntry,
         ContentEntry,
-        ImageEntry):
+        ImageEntry,
+        CategoryEntry):
     """
     abstract entry model class assembling
     all the abstract entry model in this class
