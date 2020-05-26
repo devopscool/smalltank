@@ -1,9 +1,11 @@
 from django.db import models
 from django.utils import timezone
 from django.template.defaultfilters import slugify
+from django.utils.html import strip_tags
 
 from core.managers import EntryPublishedManager
 from core.setting import UPLOAD_DEST
+from core.markups import html_format
 
 import os
 
@@ -70,6 +72,20 @@ class ContentEntry(models.Model):
     """
     content = models.TextField('content', blank=True)
 
+    @property
+    def html_content(self) -> str:
+        """
+        Return the content with the `html_format`
+        """
+        return html_format(self.content)
+
+    @property
+    def word_count_report(self) -> int:
+        """
+        Count the number of the words in content
+        """
+        return len(strip_tags(html_format(self.html_content)).split())
+
     class Meta:
         abstract = True
 
@@ -122,6 +138,20 @@ class CategoryEntry(models.Model):
     class Meta:
         abstract = True
 
+
+class AuthorsEntry(models.Model):
+    """
+    Abstract model class about the relationship between entries and their authors
+    """
+    authors = models.ManyToManyField(
+        'core.Author',
+        blank=True,
+        related_name='entries',
+        verbose_name='authors')
+
+    class Meta:
+        abstract = True
+
 # class AuthorsInfoEntry(models.Model):
 #     """
 #     Abstract model class for the relationship of entries and their authors
@@ -136,7 +166,8 @@ class AbstractEntry(
         BaseEntry,
         ContentEntry,
         ImageEntry,
-        CategoryEntry):
+        CategoryEntry,
+        AuthorsEntry):
     """
     abstract entry model class assembling
     all the abstract entry model in this class
