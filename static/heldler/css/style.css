@@ -989,6 +989,11 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
 .post_section .post_section_inner .left_sidebar .feature_post_area {
   padding-top: 15px;
 }
+
+.post_section .post_section_inner .left_sidebar .feature_post_watch_area {
+  margin-top: 30px;
+}
+
 .post_section .post_section_inner .left_sidebar .feature_post_area .feature_post {
   background: #fff;
   margin-top: 30px;
@@ -1302,6 +1307,7 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
   padding: 35px;
   text-align: center;
   margin-bottom: 40px;
+  margin-top: 60px; /* add the margin top when remove the video div was removed */
 }
 .post_section .post_section_inner .right_sidebar .advertisement_2 img {
   max-width: 100%;
