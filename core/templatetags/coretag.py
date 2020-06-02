@@ -3,6 +3,7 @@ from core.models.entry import Entry
 
 register = Library()
 
+
 @register.inclusion_tag('core/tags/swap.html')
 def get_featured_entries(number=5, template='core/tags/content.html'):
     """
@@ -10,3 +11,12 @@ def get_featured_entries(number=5, template='core/tags/content.html'):
     """
     return {'template': template,
             'content': Entry.published.all()[:number]}
+
+
+@register.inclusion_tag('core/tags/swap.html')
+def get_left_popular_post(number=4, template='core/tags/left_popular.html'):
+    """
+    Return the left popular part entries
+    """
+    return {'template': template,
+            'popular_content': Entry.published.all()[:number]}
