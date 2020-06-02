@@ -26,6 +26,12 @@ class BaseEntry(models.Model):
         unique_for_date='publication_date',
         help_text="Used to build the entry's URL."
     )
+
+    tag = models.CharField(
+        'tag', max_length=255,
+        null=True,
+        help_text='the tag of entry')
+
     status = models.IntegerField(
         'status', db_index=True,
         choices=STATUS_CHOICES, default=0

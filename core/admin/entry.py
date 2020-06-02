@@ -17,7 +17,7 @@ class EntryAdmin(admin.ModelAdmin):
             'fields': ('publication_date', ('start_publication', 'end_publication')),
             'classes': ('collapse', 'collapse-closed')
         }),
-        (None, {'fields': ('categories', 'authors', 'slug',)}),
+        (None, {'fields': ('categories', 'authors', 'slug', 'tag')}),
     )
     date_hierarchy = 'publication_date'
     list_filter = ('publication_date', 'status')
