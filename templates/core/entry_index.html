@@ -1,4 +1,5 @@
 {% extends "core/base.html" %}
+{% load coretag %}
 {% load staticfiles %}
 {#{% load coretag %}#}
 {#{% block content %}#}
@@ -228,11 +229,12 @@
                             <h2>BUSINESS  Post</h2>
                             <a href="news.html">View More <i class="fa fa-arrow-right"></i></a>
                         </div>
+                        {% get_left_popular_post %}
                         <!-- Tranding_post -->
-                        <div class="col-md-6">
+                        <!-- <div class="col-md-6">
                             <div class="tranding_post">
                                 <a href="news-details.html" class="post_img">
-                                    <img src="{% static "heldler/images/post/business-post-1.jpg" %}" alt="">
+                                    <img src="#" alt="">
                                     <span class="tag_btn">Finance</span>
                                 </a>
                                 <div class="post_content">
@@ -240,12 +242,12 @@
                                     <h6>Dec 22, 2018 at 19:35 <span>|</span><a href="#">Mahfuz Riad</a></h6>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- Tranding_post -->
-                        <div class="col-md-6">
+                        <!-- <div class="col-md-6">
                             <div class="tranding_post">
                                 <a href="news-details.html" class="post_img">
-                                    <img src="{% static "heldler/images/post/business-post-2.jpg" %}" alt="">
+                                    <img src="#" alt="">
                                     <span class="tag_btn">Trading</span>
                                 </a>
                                 <div class="post_content">
@@ -253,23 +255,23 @@
                                     <h6>Dec 22, 2018 at 19:35 <span>|</span><a href="http://emran-khan.com/">Emran Khan</a></h6>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- Tranding_post no img -->
-                        <div class="col-md-6">
+                        <!-- <div class="col-md-6">
                             <div class="tranding_post post_bg">
                                 <a href="news-details.html" class="t_heding">A Love Lorem ipsum dolor sit amet, consectetur adipiscing</a>
                                 <h6>Dec 22, 2018 at 19:35 <span>|</span><a href="http://emran-khan.com/">Emran Khan</a></h6>
                                 <span class="tag_btn">Travel</span>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- Tranding_post no img -->
-                        <div class="col-md-6">
+                        <!-- <div class="col-md-6">
                             <div class="tranding_post post_bg">
                                 <a href="news-details.html" class="t_heding">Inside Sports Building a Magazine for the Digital Eye Strain</a>
                                 <h6>Dec 22, 2018 at 19:35 <span>|</span><a href="http://emran-khan.com/">Emran Khan</a></h6>
                                 <span class="tag_btn">Tech</span>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <!-- Feature Post Area-->
                     <div class="row feature_post_area">

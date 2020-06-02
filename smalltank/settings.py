@@ -132,6 +132,9 @@ STATICFILES_DIRS = [
     '/var/www/static/',
 ]
 
+MEDIA_URL = '/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "uploads/")
+
 # setting SITE ID
 SITE_ID = 1
 

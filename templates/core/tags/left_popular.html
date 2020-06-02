@@ -1,0 +1,25 @@
+{% for object in popular_content %}
+{% if object.image %}
+<div class="col-md-6">
+    <div class="tranding_post">
+        <a href="news-details.html" class="post_img">
+                <img src="{{ object.image.url }}" alt="">
+            <span class="tag_btn">{{ object.tag }}</span>
+        </a>
+        <div class="post_content">
+            <a href="news-details.html" class="t_heding">{{ object.title }}</a>
+            <h6>{{ object.publication_date }} <span>|</span><a href="#">Mahfuz Riad</a></h6>
+        </div>
+    </div>
+</div>
+{% else %}
+ <!-- Tranding_post no img -->
+    <div class="col-md-6">
+        <div class="tranding_post post_bg">
+            <a href="news-details.html" class="t_heding">{{ object.title }}</a>
+            <h6>{{ object.publication_date }} <span>|</span><a href="http://emran-khan.com/">Emran Khan</a></h6>
+            <span class="tag_btn">{{ object.tag }}</span>
+        </div>
+    </div>
+{% endif %}
+{% endfor %}
