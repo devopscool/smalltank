@@ -1,0 +1,22 @@
+{% for watch in watch_posts %}
+<!-- font_load_post -->
+<div class="col-12">
+    <div class="font_load_post">
+        <img src="{{ watch.image.url }}" alt="">
+        <div class="post_caption">
+            <a href="#" class="wow fadeInUp tag_btn">{{ watch.tag }}</a>
+            <a href="news-details.html" class="wow fadeInUp heding" data-wow-delay="0.2s">{{ watch.title }}</a>
+        </div>
+    </div>
+</div>
+
+<!--ethereum_price_posts -->
+{#<div class="col-12">#}
+{#    <div class="ethereum_price_posts">#}
+{#        <a href="#" class="tag_btn">{{ watch.tag }}</a>#}
+{#        <a href="news-details.html" class="ep_heding">{{ watch.title }}</a>#}
+{#        <p>{{ watch.content }}</p>#}
+{#        <img src="{{ watch.image.url }}" alt="">#}
+{#    </div>#}
+{#</div>#}
+{% endfor %}

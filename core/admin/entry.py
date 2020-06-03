@@ -7,7 +7,7 @@ class EntryAdmin(admin.ModelAdmin):
     """
     fieldsets = (
         ('Content', {
-           'fields': (('title', 'status'), 'content')
+           'fields': (('title', 'status'), 'content', 'is_watch_post')
         }),
         ('Illustration', {
             'fields': ('image', 'image_caption'),

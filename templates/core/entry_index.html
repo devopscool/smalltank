@@ -273,89 +273,10 @@
                             </div>
                         </div> -->
                     </div>
-                    <!-- Feature Post Area-->
-                    <div class="row feature_post_area">
-                        <div class="col-12">
-                            <div class="feature_tittle">
-                                <h2>Travel Post</h2>
-                                <a href="news-2.html">View More <i class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="media feature_post">
-                               <div class="feture_img">
-                                    <a href="news-details.html"><img src="{% static "heldler/images/post/travel-post-1.jpg" %}" alt=""></a>
-                                    <ul class="special_share">
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                               </div>
-                                <div class="media-body feture_content">
-                                    <a href="news-details.html" class="f_heding">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
-                                    <h6>Dec 10, 2018 at 19:35 <span>|</span><a href="http://emran-khan.com/">Emran Khan</a></h6>
-                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="media feature_post">
-                               <div class="feture_img">
-                                    <a href="news-details.html"><img src="{% static "heldler/images/post/travel-post-2.jpg" %}" alt=""></a>
-                                    <ul class="special_share">
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                               </div>
-                                <div class="media-body feture_content">
-                                    <a href="news-details.html" class="f_heding">Bitcoin ETFs seek approval of skeptical <br> regulator</a>
-                                    <h6>Jan 10, 2018 at 19:35 <span>|</span><a href="http://emran-khan.com/">Emran Khan</a></h6>
-                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="media feature_post border-0">
-                               <div class="feture_img">
-                                    <a href="news-details.html"><img src="{% static "heldler/images/post/travel-post-3.jpg" %}" alt=""></a>
-                                    <ul class="special_share">
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                               </div>
-                                <div class="media-body feture_content">
-                                    <a href="news-details.html" class="f_heding">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
-                                    <h6>Jan 10, 2018 at 19:35 <span>|</span><a href="http://emran-khan.com/">Emran Khan</a></h6>
-                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% get_left_middle_post %}
                     <!-- Watch It Area-->
                     <div class="row watch_it_area">
-                        <!-- font_load_post -->
-                        <div class="col-12">
-                           <div class="font_load_post">
-                                <img src="{% static "heldler/images/post/font-load-1.jpg" %}" alt="">
-                                <div class="post_caption">
-                                    <a href="#" class="wow fadeInUp tag_btn">Travel</a>
-                                    <a href="news-details.html" class="wow fadeInUp heding" data-wow-delay="0.2s">Why It Pays to Front-Load Your 529 Plan</a>
-                                </div>
-                           </div>
-                        </div>
-
-                        <!--ethereum_price_posts -->
-                        <div class="col-12">
-                            <div class="ethereum_price_posts">
-                                <a href="#" class="tag_btn">Travel</a>
-                                <a href="news-details.html" class="ep_heding">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled</a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat turpis nec lectus congue, sed varius ligula iaculis. Orci varius natoque penatibus.</p>
-                                <img src="{% static "heldler/images/post/font-load-2.jpg" %}" alt="">
-                            </div>
-                        </div>
-
+                        {% get_left_watch_post %}
                         <!-- Subscribe Area -->
                         <!--
                         <div class="col-12">

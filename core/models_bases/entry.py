@@ -54,6 +54,10 @@ class BaseEntry(models.Model):
     last_update = models.DateTimeField(
         'last update date', default=timezone.now())
 
+    is_watch_post = models.BooleanField(
+        'watch entry', default=False,
+        help_text='as a watch post in index page, if have image, need change to 770x120')
+
     object = models.Manager()
     published = EntryPublishedManager()
 

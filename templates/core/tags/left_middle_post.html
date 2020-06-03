@@ -1,0 +1,32 @@
+<div class="row feature_post_area">
+    <div class="col-12">
+        <div class="feature_tittle">
+            <h2>Travel Post</h2>
+            <a href="news-2.html">View More <i class="fa fa-arrow-right"></i></a>
+        </div>
+    </div>
+    {% for entry in middle_post %}
+        <div class="col-12">
+            <div class="media feature_post">
+                <div class="feture_img">
+                    <a href="news-details.html">
+                        {% if entry.image %}
+                            <img src="{{ entry.image.url }}" alt="">
+                        {% else %}
+                            <img src="#" alt="">
+                        {% endif %}</a>
+                    <ul class="special_share">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
+                </div>
+                <div class="media-body feture_content">
+                    <a href="news-details.html" class="f_heding">{{ entry.title }}</a>
+                    <h6>Dec 10, 2018 at 19:35 <span>|</span><a href="http://emran-khan.com/">Emran Khan</a></h6>
+                    <p>{{ entry.content }}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
