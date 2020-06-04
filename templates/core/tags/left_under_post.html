@@ -1,0 +1,26 @@
+{% for entry in letf_under_posts %}
+    {% if entry.image %}
+        <!-- Tranding_post -->
+        <div class="col-md-6">
+            <div class="tranding_post">
+                <a href="news-details.html" class="post_img">
+                    <img src="{{ entry.image.url }}" alt="">
+                    <span class="tag_btn">{{ entry.tag }}</span>
+                </a>
+                <div class="post_content">
+                    <a href="news-details.html" class="t_heding">{{ entry.title }}</a>
+                    <h6>Dec 22, 2018 at 19:35 <span>|</span><a href="#">Mahfuz Riad</a></h6>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <!-- Tranding_post no img -->
+        <div class="col-md-6">
+            <div class="tranding_post text_post">
+                <span class="tag_btn">{{ entry.tag }}</span>
+                <a href="news-details.html" class="t_heding">{{ entry.title }}</a>
+                <h6>Jan 10, 2018 at 19:35 <span>|</span><a href="http://emran-khan.com/">Emran Khan</a></h6>
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}

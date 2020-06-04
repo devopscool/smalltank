@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="braking_news row">
+        <h4 class="braking_heding col-1">News</h4>
+        <div id="newsIndicators" class="carousel slide col-11" data-ride="carousel">
+            <div class="carousel-inner">
+                {% for entry in entry_news %}
+                    <div class="carousel-item {% if entry == entry_news.0 %} active {% endif %}">
+                        <a href="#">{{ entry.title }}</a>
+                    </div>
+                {% endfor %}
+            </div>
+            <ol class="carousel-indicators">
+                <li data-target="#newsIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#newsIndicators" data-slide-to="1"></li>
+                <li data-target="#newsIndicators" data-slide-to="2"></li>
+            </ol>
+        </div>
+    </div>
+</div>

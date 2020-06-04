@@ -58,6 +58,15 @@ class BaseEntry(models.Model):
         'watch entry', default=False,
         help_text='as a watch post in index page, if have image, need change to 770x120')
 
+    is_carousel_post = models.BooleanField(
+        'carousel entry', default=False,
+        help_text='as a carousel entry post in index page, if have image, need change to 1170x480'
+    )
+
+    as_news = models.BooleanField(
+        'news entry', default=False,
+        help_text='as a news field display on index page')
+
     object = models.Manager()
     published = EntryPublishedManager()
 

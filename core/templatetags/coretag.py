@@ -29,7 +29,9 @@ def get_left_middle_post(number=4, template='core/tags/left_middle_post.html'):
     Return the left middle post entries
     """
     return {'template': template,
-            'middle_post': Entry.published.filter(categories__title='travel', is_watch_post=0)[:number]}
+            'middle_post': Entry.published.filter(
+                categories__title='travel',
+                is_watch_post=0)[:number]}
 
 
 @register.inclusion_tag('core/tags/swap.html')
@@ -38,4 +40,40 @@ def get_left_watch_post(number=4, template='core/tags/left_middle_watch.html'):
     Return the left middle post entries
     """
     return {'template': template,
-            'watch_posts': Entry.published.filter(categories__title='travel', is_watch_post=1)[:number]}
+            'watch_posts': Entry.published.filter(
+                categories__title='travel',
+                is_watch_post=1)[:number]}
+
+
+@register.inclusion_tag('core/tags/swap.html')
+def get_left_under_post(number=4, template='core/tags/left_under_post.html'):
+    """
+    Return the left middle post entries
+    """
+    return {'template': template,
+            'letf_under_posts': Entry.published.filter(
+                categories__title='fashion')[:number]}
+
+
+@register.inclusion_tag('core/tags/swap.html')
+def get_carousel(number=3, template='core/tags/carousel_panel.html'):
+    """
+    Return the left middle post entries
+    """
+    return {'template': template,
+            'entry_carousel': Entry.published.filter(
+                is_carousel_post=1)[:number]}
+
+
+@register.inclusion_tag('core/tags/swap.html')
+def get_news_area(number=3, template='core/tags/news_area.html'):
+    """
+    Return the entries of news
+    """
+    a = {'template': template,
+            'entry_news': Entry.published.filter(
+                as_news=1)[:number]}
+
+    return {'template': template,
+            'entry_news': Entry.published.filter(
+                as_news=1)[:number]}

@@ -114,29 +114,7 @@
 
 <!-- Braking News Area -->
 {% block news-area %}
-<div class="container">
-        <div class="braking_news row">
-           <h4 class="braking_heding col-1">News</h4>
-            <div id="newsIndicators" class="carousel slide col-11" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <a href="#">There are many variations of passages of Lorem Ipsum available</a>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry</a>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="#">Contrary to popular belief, Lorem Ipsum is not simply random text</a>
-                    </div>
-                </div>
-                <ol class="carousel-indicators">
-                    <li data-target="#newsIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#newsIndicators" data-slide-to="1"></li>
-                    <li data-target="#newsIndicators" data-slide-to="2"></li>
-                </ol>
-            </div>
-        </div>
-    </div>
+{% get_news_area %}
 {% endblock news-area %}
 <!-- End Braking News Area -->
 
@@ -146,48 +124,12 @@
     <section class="home_banner_area">
         <div class="container">
             <div class="row home_banner_inner">
-                <!-- Slicer col -->
-                <div class="carousel slide banner_slider col-12" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="{% static "heldler/images/banner-slider.jpg" %}" alt="First slide">
-                            <ul class="special_share">
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            </ul>
-                            <div class="slider_caption">
-                                <h6 class="wow fadeInUp animated">February 21, 2018  , Updated 3 hours ago</h6>
-                                <a href="news-details.html" class="wow fadeInUp animated heding" data-wow-delay="0.2s">Lorem Ipsum is simply dummy text of the printing.</a>
-                                <p class="wow fadeInUp animated" data-wow-delay="0.4s">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                <a href="#" class="wow fadeInUp animated tag_btn" data-wow-delay="0.6s">Investing</a>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{% static "heldler/images/banner-slider-2.jpg" %}" alt="Second slide">
-                            <ul class="special_share">
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            </ul>
-                            <div class="slider_caption">
-                                <h6 class="wow fadeInUp animated">February 21, 2018  , Updated 3 hours ago</h6>
-                                <a href="news-details.html" class="wow fadeInUp animated heding" data-wow-delay="0.2s">Contrary to popular belief, Lorem Ipsum is not simply random text. </a>
-                                <p class="wow fadeInUp animated" data-wow-delay="0.4s">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                <a href="#" class="wow fadeInUp animated tag_btn" data-wow-delay="0.6s">Investing</a>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="http://themazine.com/html/mora-blog/.banner_slider" data-slide="prev">
-                        <i class="fa fa-angle-left"></i>
-                    </a>
-                    <a class="carousel-control-next" href="http://themazine.com/html/mora-blog/.banner_slider" data-slide="next">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-                </div>
+                {% get_carousel %}
                 <!-- belarus_items -->
                 <!--
                 <div class="col-md-6">
                     <div class="belarus_items">
-                        <img src="{% static "heldler/images/banner-item-1.jpg" %}" alt="">
+                        <img src="#" alt="">
                         <div class="belarus_content">
                             <h6 class="wow fadeInUp">March 15, 2018</h6>
                             <a href="news-details.html" class="heding wow fadeInUp" data-wow-delay="0.2s">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</a>
@@ -197,7 +139,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="belarus_items">
-                        <img src="{% static "heldler/images/banner-item-2.jpg" %}" alt="">
+                        <img src="#" alt="">
                         <div class="belarus_content">
                             <h6 class="wow fadeInUp">March 15, 2018</h6>
                             <a href="news-details.html" class="heding wow fadeInUp" data-wow-delay="0.2s">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</a>
@@ -208,11 +150,12 @@
                 -->
                 <!-- End belarus_items -->
             </div>
-            <ul class="row magazine">
+            <!--
+            <ul class="row magazisne">
                 <li class="col-md-4 col-sm-6"><a href="news-details.html">Earned $9,000,000 per Year with a Magazine Wesbite</a></li>
                 <li class="col-md-4 col-sm-6"><a href="news-details.html">The man who builds up private libraries - book by rare book</a></li>
                 <li class="col-md-4 col-sm-6"><a href="news-details.html">Futures Firm Cboe Filed for 6 Bitcoin ETFs This Week</a></li>
-            </ul>
+            </ul> -->
         </div>
     </section>
     <!-- End Home Banner Area -->
@@ -333,6 +276,7 @@
                                 <a href="video-details.html" class="video_heding">Nullam neque leo, placerat eu ante vitae, vehicula.</a>
                             </div>
                         </div>
+                        <!--
                         <div class="col-md-6">
                             <div class="tranding_post wathc_text">
                                 <a href="news-details.html" class="t_heding">Stocks Climb as Yields Hold Dollar Falls: Markets Wrap</a>
@@ -344,7 +288,7 @@
                                 <a href="news-details.html" class="t_heding">Nullam neque leo, placerat eu ante vitae, vehicula.</a>
                                 <h6><span class="tag_btn">Trending</span>  April 25, 2018</h6>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
                     <!-- Our Latest  Articles -->
@@ -355,49 +299,7 @@
                                 <a href="news-2.html">View More <i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
-                        <!-- Tranding_post -->
-                        <div class="col-md-6">
-                            <div class="tranding_post">
-                                <a href="news-details.html" class="post_img">
-                                    <img src="{% static "heldler/images/post/fashion-1.jpg" %}" alt="">
-                                    <span class="tag_btn">Fashion</span>
-                                </a>
-                                <div class="post_content">
-                                    <a href="news-details.html" class="t_heding">Nam convallis lacus volutpat risus luctus, et consectetur massa pharetra.</a>
-                                    <h6>Dec 22, 2018 at 19:35 <span>|</span><a href="#">Mahfuz Riad</a></h6>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Tranding_post -->
-                        <div class="col-md-6">
-                            <div class="tranding_post">
-                                <a href="news-details.html" class="post_img">
-                                    <img src="{% static "heldler/images/post/fashion-2.jpg" %}" alt="">
-                                    <span class="tag_btn">Trading</span>
-                                </a>
-                                <div class="post_content">
-                                    <a href="news-details.html" class="t_heding">Trine Kjer has been running her blog for approximately ten years</a>
-                                    <h6>Feb 22, 2018 at 19:35 <span>|</span><a href="http://emran-khan.com/">Emran Khan</a></h6>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Tranding_post no img -->
-                        <div class="col-md-6">
-                            <div class="tranding_post text_post">
-                                <span class="tag_btn">Fashion</span>
-                                <a href="news-details.html" class="t_heding">Nam convallis lacus volutpat risus luctus, et consectetur</a>
-                                <h6>Jan 10, 2018 at 19:35 <span>|</span><a href="http://emran-khan.com/">Emran Khan</a></h6>
-                            </div>
-                        </div>
-                        <!-- Tranding_post no img -->
-                        <div class="col-md-6">
-                            <div class="tranding_post text_post">
-                                <span class="tag_btn">Tech</span>
-                                <a href="news-details.html" class="t_heding">Maecenas convallis ante nisi, et finibus ante porta in. </a>
-                                <h6>Jan 12, 2018 at 19:35 <span>|</span><a href="http://emran-khan.com/">Emran Khan</a></h6>
-                            </div>
-                        </div>
-
+                        {% get_left_under_post %}
                         <!-- font_load_post -->
                         <!--
                         <div class="col-12">
