@@ -1,7 +1,7 @@
 """ Category model for smalltank """
 from django.db import models
 
-from core.managers import EntryPublishedManager
+from core.managers import EntryRelatedPublishedManager
 
 from mptt.managers import TreeManager
 from mptt.models import MPTTModel
@@ -29,8 +29,8 @@ class Category(MPTTModel):
     description = models.TextField(
         'description', blank=True)
 
-    # object = TreeManager()
-    # published = EntryPublishedManager()
+    object = TreeManager()
+    published = EntryRelatedPublishedManager()
 
     @property
     def category_tree_path(self):

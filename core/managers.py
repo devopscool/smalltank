@@ -31,3 +31,18 @@ def entries_published(queryset):
 class EntryPublishedManager(models.Manager):
     def get_queryset(self):
         return entries_published(super(EntryPublishedManager, self).get_queryset())
+
+
+class EntryRelatedPublishedManager(models.Manager):
+    """
+    Retrieve object associated with published entries by Manager
+    """
+
+    def get_queryset(self):
+        """
+        Return a queryset with published entries.
+        """
+        now = timezone.now()
+
+        return super(
+            EntryRelatedPublishedManager, self).get_queryset().distinct()

@@ -1,9 +1,9 @@
-from django.conf.urls import url
+from django.urls import path
 
 from core.views.archives import EntryIndex
 
 urlpatterns = [
-    url(r'^$',
+    path('',
         EntryIndex.as_view(),
         name='entry_index_archive'),
 ]

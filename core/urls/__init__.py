@@ -1,9 +1,10 @@
-from django.conf.urls import url, include
+from django.urls import path, include
 
 app_name = 'core'
 
 index_patterns = [
-    url(r'^', include('core.urls.archives')),
+    path('', include('core.urls.archives')),
+    path('categories/', include('core.urls.categories')),
 ]
 
 archive_patterns = (index_patterns) # can add new pattern into this tuple
