@@ -15,3 +15,21 @@ class EntryQuerysetArchiveTemplateResponseMixin(TemplateResponseMixin):
         templates.append(template_name)
 
         return templates
+
+
+class EntryQuerysetTemplateResponseMixin(TemplateResponseMixin):
+    """
+    Return a custom template name for views, a queryset
+    of the entry filtered by other model.
+    """
+    def get_template_names(self):
+        """
+        Return a template name for the view
+        """
+        templates = [
+            'core/category_list_detail.html']
+
+        if self.template_name is not None:
+            templates.insert(0, self.template_name)
+
+        return templates
