@@ -11,4 +11,25 @@
 
 {% block content %}
 {% get_breadcrumb %}
+    <section class="post_section news_post">
+        <div class="container">
+            <div class="row post_section_inner">
+                <!-- Left_sidebar -->
+                <div class="col-lg-8">
+                    {% get_news_left_sidebar %}
+                </div>
+
+                <!-- End left_sidebar -->
+                {% get_news_right_sidebar %}
+            </div>
+        </div>
+    </section>
 {% endblock content %}
+
+{% block connect-us %}
+    {% get_connect_us %}
+{% endblock connect-us %}
+
+{% block footer-area %}
+    {% get_foot_area %}
+{% endblock footer-area %}

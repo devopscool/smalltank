@@ -94,9 +94,44 @@ def get_main_header(template='core/tags/main_header.html'):
     """
     return {'template': template}
 
+
 @register.inclusion_tag('core/tags/swap.html')
 def get_breadcrumb(template='core/tags/breadcrumb.html'):
     """
     Return the left middle post entries
+    """
+    return {'template': template}
+
+
+@register.inclusion_tag('core/tags/swap.html')
+def get_news_left_sidebar(number=3, template='core/tags/news_left_sidebar.html'):
+    """
+    Return the left side html code of news list
+    """
+    return {'template': template,
+            'entry_list': Entry.published.filter(
+                as_news=1)[:number]}
+
+
+@register.inclusion_tag('core/tags/swap.html')
+def get_news_right_sidebar(number=3, template='core/tags/news_right_sidebar.html'):
+    """
+    Return the right side html code of news list
+    """
+    return {'template': template}
+
+
+@register.inclusion_tag('core/tags/swap.html')
+def get_connect_us(number=3, template='core/tags/get_connect_us.html'):
+    """
+    Return the connect us html code
+    """
+    return {'template': template}
+
+
+@register.inclusion_tag('core/tags/swap.html')
+def get_foot_area(number=3, template='core/tags/foot_area.html'):
+    """
+    Return the connect us html code
     """
     return {'template': template}

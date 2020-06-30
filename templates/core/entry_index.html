@@ -66,243 +66,262 @@
         <div class="container">
             <div class="row post_section_inner">
                 <!-- Left_sidebar -->
-                <div class="col-lg-8 left_sidebar">
-                    <!-- Tranding Area Post -->
-                    <div class="row tranding_post_area">
-                        <div class="col-12 tranding_tittle">
-                            <h2>BUSINESS  Post</h2>
-                            <a href="news.html">View More <i class="fa fa-arrow-right"></i></a>
-                        </div>
-                        {% get_left_popular_post %}
-                        <!-- Tranding_post -->
-                        <!-- <div class="col-md-6">
-                            <div class="tranding_post">
-                                <a href="news-details.html" class="post_img">
-                                    <img src="#" alt="">
-                                    <span class="tag_btn">Finance</span>
-                                </a>
-                                <div class="post_content">
-                                    <a href="news-details.html" class="t_heding">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</a>
-                                    <h6>Dec 22, 2018 at 19:35 <span>|</span><a href="#">Mahfuz Riad</a></h6>
-                                </div>
+                {% block left_sidebar %}
+                    <div class="col-lg-8 left_sidebar">
+                        <!-- Tranding Area Post -->
+                        <div class="row tranding_post_area">
+                            <div class="col-12 tranding_tittle">
+                                <h2>BUSINESS Post</h2>
+                                <a href="news.html">View More <i class="fa fa-arrow-right"></i></a>
                             </div>
-                        </div> -->
-                        <!-- Tranding_post -->
-                        <!-- <div class="col-md-6">
-                            <div class="tranding_post">
-                                <a href="news-details.html" class="post_img">
-                                    <img src="#" alt="">
-                                    <span class="tag_btn">Trading</span>
-                                </a>
-                                <div class="post_content">
-                                    <a href="news-details.html" class="t_heding">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
-                                    <h6>Dec 22, 2018 at 19:35 <span>|</span><a href="http://emran-khan.com/">Emran Khan</a></h6>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- Tranding_post no img -->
-                        <!-- <div class="col-md-6">
-                            <div class="tranding_post post_bg">
-                                <a href="news-details.html" class="t_heding">A Love Lorem ipsum dolor sit amet, consectetur adipiscing</a>
-                                <h6>Dec 22, 2018 at 19:35 <span>|</span><a href="http://emran-khan.com/">Emran Khan</a></h6>
-                                <span class="tag_btn">Travel</span>
-                            </div>
-                        </div> -->
-                        <!-- Tranding_post no img -->
-                        <!-- <div class="col-md-6">
-                            <div class="tranding_post post_bg">
-                                <a href="news-details.html" class="t_heding">Inside Sports Building a Magazine for the Digital Eye Strain</a>
-                                <h6>Dec 22, 2018 at 19:35 <span>|</span><a href="http://emran-khan.com/">Emran Khan</a></h6>
-                                <span class="tag_btn">Tech</span>
-                            </div>
-                        </div> -->
-                    </div>
-                    {% get_left_middle_post %}
-                    <!-- Watch It Area-->
-                    <div class="row watch_it_area">
-                        {% get_left_watch_post %}
-                        <!-- Subscribe Area -->
-                        <!--
-                        <div class="col-12">
-                           <div class="subscribe_area">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Email address">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Subscribe</span>
+                            {% get_left_popular_post %}
+                            <!-- Tranding_post -->
+                            <!-- <div class="col-md-6">
+                                <div class="tranding_post">
+                                    <a href="news-details.html" class="post_img">
+                                        <img src="#" alt="">
+                                        <span class="tag_btn">Finance</span>
+                                    </a>
+                                    <div class="post_content">
+                                        <a href="news-details.html" class="t_heding">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</a>
+                                        <h6>Dec 22, 2018 at 19:35 <span>|</span><a href="#">Mahfuz Riad</a></h6>
                                     </div>
                                 </div>
-                           </div>
-                        </div>
-                        -->
-
-                        <div class="col-12 feature_post_watch_area">
-                            <div class="feature_tittle">
-                                <h2>Watch It</h2>
-                                <a href="video-details.html">View More <i class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="watch_video">
-                                <a href="video-details.html" class="video_thumbnail">
-                                    <img src="{% static "heldler/images/post/wathc-1.jpg" %}" alt="">
-                                    <span class="play_btn"><i class="flaticon-play-button">3.16</i></span>
-                                </a>
-                                <a href="video-details.html" class="video_heding">Nullam neque leo, placerat eu ante vitae, vehicula rhoncus quam.</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="watch_video">
-                                <a href="video-details.html" class="video_thumbnail">
-                                    <img src="{% static "heldler/images/post/wathc-2.jpg" %}" alt="">
-                                    <span class="play_btn"><i class="flaticon-play-button">5.16</i></span>
-                                </a>
-                                <a href="video-details.html" class="video_heding">Nullam neque leo, placerat eu ante vitae.</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="watch_video">
-                                <a href="video-details.html" class="video_thumbnail">
-                                    <img src="{% static "heldler/images/post/wathc-3.jpg" %}" alt="">
-                                    <span class="play_btn"><i class="flaticon-play-button">2.56</i></span>
-                                </a>
-                                <a href="video-details.html" class="video_heding">Kristin Addis, our solo female travel expert,</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="watch_video">
-                                <a href="video-details.html" class="video_thumbnail">
-                                    <img src="{% static "heldler/images/post/wathc-4.jpg" %}" alt="">
-                                    <span class="play_btn"><i class="flaticon-play-button">4.56</i></span>
-                                </a>
-                                <a href="video-details.html" class="video_heding">Nullam neque leo, placerat eu ante vitae, vehicula.</a>
-                            </div>
-                        </div>
-                        <!--
-                        <div class="col-md-6">
-                            <div class="tranding_post wathc_text">
-                                <a href="news-details.html" class="t_heding">Stocks Climb as Yields Hold Dollar Falls: Markets Wrap</a>
-                                <h6><span class="tag_btn">Technology</span>  january 21, 2018</h6>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="tranding_post wathc_text">
-                                <a href="news-details.html" class="t_heding">Nullam neque leo, placerat eu ante vitae, vehicula.</a>
-                                <h6><span class="tag_btn">Trending</span>  April 25, 2018</h6>
-                            </div>
-                        </div> -->
-                    </div>
-
-                    <!-- Our Latest  Articles -->
-                    <div class="row tranding_post_area fashion_post">
-                        <div class="col-12">
-                            <div class="feature_tittle">
-                                <h2>Fashion</h2>
-                                <a href="news-2.html">View More <i class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        {% get_left_under_post %}
-                        <!-- font_load_post -->
-                        <!--
-                        <div class="col-12">
-                           <div class="font_load_post m-0 ">
-                                <img src="heldler/images/post/font-load-3.jpg" alt="">
-                                <div class="post_caption">
-                                    <a href="#" class="wow fadeInUp tag_btn">Travel</a>
-                                    <a href="news-details.html" class="wow fadeInUp heding heding_bg" data-wow-delay="0.2s">Neque porro quisquam est qui dolorem</a>
+                            </div> -->
+                            <!-- Tranding_post -->
+                            <!-- <div class="col-md-6">
+                                <div class="tranding_post">
+                                    <a href="news-details.html" class="post_img">
+                                        <img src="#" alt="">
+                                        <span class="tag_btn">Trading</span>
+                                    </a>
+                                    <div class="post_content">
+                                        <a href="news-details.html" class="t_heding">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                                        <h6>Dec 22, 2018 at 19:35 <span>|</span><a href="http://emran-khan.com/">Emran Khan</a></h6>
+                                    </div>
                                 </div>
-                           </div>
-                        </div> -->
-                    </div>
-                </div>
-                <!-- End left_sidebar -->
-                <div class="col-lg-4 right_sidebar">
-                    <div class="btc_accordion">
-                        <div class="item">
-                            <a href="#" data-toggle="collapse" data-target="#collapseOne">Bitcoin(24h)</a>
-                            <div id="collapseOne" class="collapse show" data-parent=".btc_accordion">
-                               <div class="accordion_content">
-                                    <h2>$15212.35</h2>
-                                    <h4>EUR: €12632.32 <br>GBP: £11213.76</h4>
-                                    <ul class="btc_list">
-                                        <li>$15212</li>
-                                        <li>$14212</li>
-                                        <li>$13212</li>
-                                    </ul>
+                            </div> -->
+                            <!-- Tranding_post no img -->
+                            <!-- <div class="col-md-6">
+                                <div class="tranding_post post_bg">
+                                    <a href="news-details.html" class="t_heding">A Love Lorem ipsum dolor sit amet, consectetur adipiscing</a>
+                                    <h6>Dec 22, 2018 at 19:35 <span>|</span><a href="http://emran-khan.com/">Emran Khan</a></h6>
+                                    <span class="tag_btn">Travel</span>
+                                </div>
+                            </div> -->
+                            <!-- Tranding_post no img -->
+                            <!-- <div class="col-md-6">
+                                <div class="tranding_post post_bg">
+                                    <a href="news-details.html" class="t_heding">Inside Sports Building a Magazine for the Digital Eye Strain</a>
+                                    <h6>Dec 22, 2018 at 19:35 <span>|</span><a href="http://emran-khan.com/">Emran Khan</a></h6>
+                                    <span class="tag_btn">Tech</span>
+                                </div>
+                            </div> -->
+                        </div>
+                        {% get_left_middle_post %}
+                        <!-- Watch It Area-->
+                        <div class="row watch_it_area">
+                            {% get_left_watch_post %}
+                            <!-- Subscribe Area -->
+                            <!--
+                            <div class="col-12">
+                               <div class="subscribe_area">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Email address">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Subscribe</span>
+                                        </div>
+                                    </div>
                                </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <a href="#" data-toggle="collapse" class="collapsed" data-target="#collapseTwo">Etherume <span>$740.34</span></a>
-                            <div id="collapseTwo" class="collapse" data-parent=".btc_accordion">
-                               <div class="accordion_content">
-                                    <h2>$15212.35</h2>
-                                    <h4>EUR: €12632.32 <br>GBP: £11213.76</h4>
-                                    <ul class="btc_list">
-                                        <li>$15212</li>
-                                        <li>$14212</li>
-                                        <li>$13212</li>
-                                    </ul>
-                               </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseThree">Zcash <span>$546.83</span></a>
-                            <div id="collapseThree" class="collapse" data-parent=".btc_accordion">
-                               <div class="accordion_content">
-                                    <h2>$15212.35</h2>
-                                    <h4>EUR: €12632.32 <br>GBP:  £11213.76</h4>
-                                    <ul class="btc_list">
-                                        <li>$15212</li>
-                                        <li>$14212</li>
-                                        <li>$13212</li>
-                                    </ul>
-                               </div>
-                            </div>
-                        </div>
-                    </div>
+                            -->
 
-                    <!-- Latest Bitcoin News -->
-                    <div class="latest_news_widget">
-                        <h2>Trending News</h2>
-                        <div class="widget">
-                            <a href="news-details.html"><img src="{% static "heldler/images/post/lnw-1.jpg" %}" alt=""></a>
-                            <a href="news-details.html" class="w_heding">Envion – Digital Currency Mint in Exploits World’s Lowest Cost Power</a>
+                            <div class="col-12 feature_post_watch_area">
+                                <div class="feature_tittle">
+                                    <h2>Watch It</h2>
+                                    <a href="video-details.html">View More <i class="fa fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="watch_video">
+                                    <a href="video-details.html" class="video_thumbnail">
+                                        <img src="{% static "heldler/images/post/wathc-1.jpg" %}" alt="">
+                                        <span class="play_btn"><i class="flaticon-play-button">3.16</i></span>
+                                    </a>
+                                    <a href="video-details.html" class="video_heding">Nullam neque leo, placerat eu ante
+                                        vitae, vehicula rhoncus quam.</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="watch_video">
+                                    <a href="video-details.html" class="video_thumbnail">
+                                        <img src="{% static "heldler/images/post/wathc-2.jpg" %}" alt="">
+                                        <span class="play_btn"><i class="flaticon-play-button">5.16</i></span>
+                                    </a>
+                                    <a href="video-details.html" class="video_heding">Nullam neque leo, placerat eu ante
+                                        vitae.</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="watch_video">
+                                    <a href="video-details.html" class="video_thumbnail">
+                                        <img src="{% static "heldler/images/post/wathc-3.jpg" %}" alt="">
+                                        <span class="play_btn"><i class="flaticon-play-button">2.56</i></span>
+                                    </a>
+                                    <a href="video-details.html" class="video_heding">Kristin Addis, our solo female
+                                        travel expert,</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="watch_video">
+                                    <a href="video-details.html" class="video_thumbnail">
+                                        <img src="{% static "heldler/images/post/wathc-4.jpg" %}" alt="">
+                                        <span class="play_btn"><i class="flaticon-play-button">4.56</i></span>
+                                    </a>
+                                    <a href="video-details.html" class="video_heding">Nullam neque leo, placerat eu ante
+                                        vitae, vehicula.</a>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="col-md-6">
+                                <div class="tranding_post wathc_text">
+                                    <a href="news-details.html" class="t_heding">Stocks Climb as Yields Hold Dollar Falls: Markets Wrap</a>
+                                    <h6><span class="tag_btn">Technology</span>  january 21, 2018</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="tranding_post wathc_text">
+                                    <a href="news-details.html" class="t_heding">Nullam neque leo, placerat eu ante vitae, vehicula.</a>
+                                    <h6><span class="tag_btn">Trending</span>  April 25, 2018</h6>
+                                </div>
+                            </div> -->
                         </div>
-                        <div class="widget">
-                            <a href="news-details.html"><img src="{% static "heldler/images/post/lnw-2.jpg" %}" alt=""></a>
-                            <a href="news-details.html" class="w_heding">Bitcoin Cash Price Hits Record $2,500 to pierce $300 billion for the first time</a>
+
+                        <!-- Our Latest  Articles -->
+                        <div class="row tranding_post_area fashion_post">
+                            <div class="col-12">
+                                <div class="feature_tittle">
+                                    <h2>Fashion</h2>
+                                    <a href="news-2.html">View More <i class="fa fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            {% get_left_under_post %}
+                            <!-- font_load_post -->
+                            <!--
+                            <div class="col-12">
+                               <div class="font_load_post m-0 ">
+                                    <img src="heldler/images/post/font-load-3.jpg" alt="">
+                                    <div class="post_caption">
+                                        <a href="#" class="wow fadeInUp tag_btn">Travel</a>
+                                        <a href="news-details.html" class="wow fadeInUp heding heding_bg" data-wow-delay="0.2s">Neque porro quisquam est qui dolorem</a>
+                                    </div>
+                               </div>
+                            </div> -->
                         </div>
-                        <div class="widget border-0">
-                            <a href="news-details.html"><img src="{% static "heldler/images/post/lnw-3.jpg" %}" alt=""></a>
-                            <a href="news-details.html" class="w_heding">HOLD the Kitten! New Year Gift for Every Crypto Cuttie</a>
+                    </div>
+                {% endblock left_sidebar %}
+                <!-- End left_sidebar -->
+                {% block right_sidebar %}
+                    <div class="col-lg-4 right_sidebar">
+                        <div class="btc_accordion">
+                            <div class="item">
+                                <a href="#" data-toggle="collapse" data-target="#collapseOne">Bitcoin(24h)</a>
+                                <div id="collapseOne" class="collapse show" data-parent=".btc_accordion">
+                                    <div class="accordion_content">
+                                        <h2>$15212.35</h2>
+                                        <h4>EUR: €12632.32 <br>GBP: £11213.76</h4>
+                                        <ul class="btc_list">
+                                            <li>$15212</li>
+                                            <li>$14212</li>
+                                            <li>$13212</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <a href="#" data-toggle="collapse" class="collapsed" data-target="#collapseTwo">Etherume
+                                    <span>$740.34</span></a>
+                                <div id="collapseTwo" class="collapse" data-parent=".btc_accordion">
+                                    <div class="accordion_content">
+                                        <h2>$15212.35</h2>
+                                        <h4>EUR: €12632.32 <br>GBP: £11213.76</h4>
+                                        <ul class="btc_list">
+                                            <li>$15212</li>
+                                            <li>$14212</li>
+                                            <li>$13212</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseThree">Zcash
+                                    <span>$546.83</span></a>
+                                <div id="collapseThree" class="collapse" data-parent=".btc_accordion">
+                                    <div class="accordion_content">
+                                        <h2>$15212.35</h2>
+                                        <h4>EUR: €12632.32 <br>GBP: £11213.76</h4>
+                                        <ul class="btc_list">
+                                            <li>$15212</li>
+                                            <li>$14212</li>
+                                            <li>$13212</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <a href="news.html" class="load_more_btn">Load more..</a>
-                    </div>
-                    <!-- Text widget -->
-                    <div class="text_widget_area">
-                       <div class="text_widget">
-                            <a href="news-details.html">Nam ornare ultricies dui in finibus. Vivamus in neque vel ipsum accumsan pharetra. </a>
-                            <h6>10:29, Press Releases</h6>
-                       </div>
-                       <div class="text_widget">
-                            <a href="news-details.html">Phasellus mauris tellus, suscipit ac lectus vitae, faucibus vehicula diam. </a>
-                            <h6>12:59, Press Releases</h6>
-                       </div>
-                       <div class="text_widget">
-                            <a href="news-details.html">Buffett Warns Investors That Safe-Looking Bonds Can Be Risky</a>
-                            <h6>2:37, Press Releases</h6>
-                       </div>
-                       <div class="text_widget m-0">
-                            <a href="news-details.html">Nam ornare ultricies dui in finibus. Vivamus in neque vel ipsum accumsan pharetra. </a>
-                            <h6 class="padding-bottom-0">11:38, Press Releases</h6>
-                       </div>
-                    </div>
-                    <!-- Advertisement -->
-                    <div class="advertisement">
-                        <a href="#"><img src="{% static "heldler/images/advertisement-1.jpg" %}" alt=""></a>
-                    </div>
-                    <!-- Video widget -->
-                    <!--
+
+                        <!-- Latest Bitcoin News -->
+                        <div class="latest_news_widget">
+                            <h2>Trending News</h2>
+                            <div class="widget">
+                                <a href="news-details.html"><img src="{% static "heldler/images/post/lnw-1.jpg" %}"
+                                                                 alt=""></a>
+                                <a href="news-details.html" class="w_heding">Envion – Digital Currency Mint in Exploits
+                                    World’s Lowest Cost Power</a>
+                            </div>
+                            <div class="widget">
+                                <a href="news-details.html"><img src="{% static "heldler/images/post/lnw-2.jpg" %}"
+                                                                 alt=""></a>
+                                <a href="news-details.html" class="w_heding">Bitcoin Cash Price Hits Record $2,500 to
+                                    pierce $300 billion for the first time</a>
+                            </div>
+                            <div class="widget border-0">
+                                <a href="news-details.html"><img src="{% static "heldler/images/post/lnw-3.jpg" %}"
+                                                                 alt=""></a>
+                                <a href="news-details.html" class="w_heding">HOLD the Kitten! New Year Gift for Every
+                                    Crypto Cuttie</a>
+                            </div>
+                            <a href="news.html" class="load_more_btn">Load more..</a>
+                        </div>
+                        <!-- Text widget -->
+                        <div class="text_widget_area">
+                            <div class="text_widget">
+                                <a href="news-details.html">Nam ornare ultricies dui in finibus. Vivamus in neque vel
+                                    ipsum accumsan pharetra. </a>
+                                <h6>10:29, Press Releases</h6>
+                            </div>
+                            <div class="text_widget">
+                                <a href="news-details.html">Phasellus mauris tellus, suscipit ac lectus vitae, faucibus
+                                    vehicula diam. </a>
+                                <h6>12:59, Press Releases</h6>
+                            </div>
+                            <div class="text_widget">
+                                <a href="news-details.html">Buffett Warns Investors That Safe-Looking Bonds Can Be
+                                    Risky</a>
+                                <h6>2:37, Press Releases</h6>
+                            </div>
+                            <div class="text_widget m-0">
+                                <a href="news-details.html">Nam ornare ultricies dui in finibus. Vivamus in neque vel
+                                    ipsum accumsan pharetra. </a>
+                                <h6 class="padding-bottom-0">11:38, Press Releases</h6>
+                            </div>
+                        </div>
+                        <!-- Advertisement -->
+                        <div class="advertisement">
+                            <a href="#"><img src="{% static "heldler/images/advertisement-1.jpg" %}" alt=""></a>
+                        </div>
+                        <!-- Video widget -->
+                        <!--
                     <div class="video_widget">
                         <div class="watch_video">
                             <a href="video-details.html" class="video_thumbnail">
@@ -313,69 +332,78 @@
                         </div>
                     </div>
                     -->
-                    <!-- Advertisement -->
-                    <div class="advertisement_2">
-                        <a href="#">
-                            <img src="{% static "heldler/images/advertisement-2.jpg" %}" alt="">
-                        </a>
-                    </div>
-                    <!-- Social Sidget -->
-                    <ul class="social_widget">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a></li>
-                        <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-                    </ul>
-                    <!-- Tabs Widget -->
-                    <div class="tabs_widge">
-                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <a class="active" id="nav-home-tab" data-toggle="tab" href="#technology" role="tab">Technology</a>
-                            <a id="nav-profile-tab" data-toggle="tab" href="#gaming" role="tab">Gaming</a>
+                        <!-- Advertisement -->
+                        <div class="advertisement_2">
+                            <a href="#">
+                                <img src="{% static "heldler/images/advertisement-2.jpg" %}" alt="">
+                            </a>
                         </div>
-                        <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active text_widget_area" id="technology" role="tabpanel">
-                                <!-- Text widget -->
-                               <div class="text_widget">
-                                    <a href="news-details.html">How to secure peace of mind and income that beats banks</a>
-                                    <h6>10:29, Press Releases <span class="tech">Technology</span></h6>
-                               </div>
-                               <div class="text_widget">
-                                    <a href="news-details.html">Token Launch Date Announced for Dether, World’s First Peer-To-Peer Ecosystem of Crypto Buyers, Sellers, and Shops</a>
-                                    <h6>12:59, Press Releases <span class="hot">Hot</span></h6>
-                               </div>
-                               <div class="text_widget">
-                                    <a href="news-details.html">Buffett Warns Investors That Safe-Looking Bonds Can Be Risky</a>
-                                    <h6>2:37, Press Releases <span class="gaming">Gaming</span></h6>
-                               </div>
-                               <div class="text_widget m-0">
-                                    <a href="news-details.html">Falls Below $16,400, Loses Nearly 15% in Major Correction</a>
-                                    <h6 class="padding-bottom-0">11:38, Press Releases <span>Fashion</span></h6>
-                               </div>
+                        <!-- Social Sidget -->
+                        <ul class="social_widget">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a></li>
+                            <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                        <!-- Tabs Widget -->
+                        <div class="tabs_widge">
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="active" id="nav-home-tab" data-toggle="tab" href="#technology" role="tab">Technology</a>
+                                <a id="nav-profile-tab" data-toggle="tab" href="#gaming" role="tab">Gaming</a>
                             </div>
-                            <div class="tab-pane fade text_widget_area" id="gaming" role="tabpanel">
-                                <!-- Text widget -->
-                               <div class="text_widget">
-                                    <a href="news-details.html">Buffett Warns Investors That Safe-Looking Bonds Can Be Risky</a>
-                                    <h6>2:37, Press Releases <span class="gaming">Gaming</span></h6>
-                               </div>
-                               <div class="text_widget m-0">
-                                    <a href="news-details.html">Falls Below $16,400, Loses Nearly 15% in Major Correction</a>
-                                    <h6 class="padding-bottom-0">11:38, Press Releases <span>Fashion</span></h6>
-                               </div>
-                               <div class="text_widget">
-                                    <a href="news-details.html">How to secure peace of mind and income that beats banks</a>
-                                    <h6>10:29, Press Releases <span class="tech">Technology</span></h6>
-                               </div>
-                               <div class="text_widget">
-                                    <a href="news-details.html">Token Launch Date Announced for Dether, World’s First Peer-To-Peer Ecosystem of Crypto Buyers, Sellers, and Shops</a>
-                                    <h6>12:59, Press Releases <span class="hot">Hot</span></h6>
-                               </div>
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active text_widget_area" id="technology" role="tabpanel">
+                                    <!-- Text widget -->
+                                    <div class="text_widget">
+                                        <a href="news-details.html">How to secure peace of mind and income that beats
+                                            banks</a>
+                                        <h6>10:29, Press Releases <span class="tech">Technology</span></h6>
+                                    </div>
+                                    <div class="text_widget">
+                                        <a href="news-details.html">Token Launch Date Announced for Dether, World’s
+                                            First Peer-To-Peer Ecosystem of Crypto Buyers, Sellers, and Shops</a>
+                                        <h6>12:59, Press Releases <span class="hot">Hot</span></h6>
+                                    </div>
+                                    <div class="text_widget">
+                                        <a href="news-details.html">Buffett Warns Investors That Safe-Looking Bonds Can
+                                            Be Risky</a>
+                                        <h6>2:37, Press Releases <span class="gaming">Gaming</span></h6>
+                                    </div>
+                                    <div class="text_widget m-0">
+                                        <a href="news-details.html">Falls Below $16,400, Loses Nearly 15% in Major
+                                            Correction</a>
+                                        <h6 class="padding-bottom-0">11:38, Press Releases <span>Fashion</span></h6>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade text_widget_area" id="gaming" role="tabpanel">
+                                    <!-- Text widget -->
+                                    <div class="text_widget">
+                                        <a href="news-details.html">Buffett Warns Investors That Safe-Looking Bonds Can
+                                            Be Risky</a>
+                                        <h6>2:37, Press Releases <span class="gaming">Gaming</span></h6>
+                                    </div>
+                                    <div class="text_widget m-0">
+                                        <a href="news-details.html">Falls Below $16,400, Loses Nearly 15% in Major
+                                            Correction</a>
+                                        <h6 class="padding-bottom-0">11:38, Press Releases <span>Fashion</span></h6>
+                                    </div>
+                                    <div class="text_widget">
+                                        <a href="news-details.html">How to secure peace of mind and income that beats
+                                            banks</a>
+                                        <h6>10:29, Press Releases <span class="tech">Technology</span></h6>
+                                    </div>
+                                    <div class="text_widget">
+                                        <a href="news-details.html">Token Launch Date Announced for Dether, World’s
+                                            First Peer-To-Peer Ecosystem of Crypto Buyers, Sellers, and Shops</a>
+                                        <h6>12:59, Press Releases <span class="hot">Hot</span></h6>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                {% endblock right_sidebar %}
             </div>
         </div>
     </section>
@@ -383,62 +411,9 @@
 {% endblock content %}
 
 {% block connect-us %}
-    <section class="connect_with_us">
-        <div class="container">
-            <h2>Connect with us</h2>
-            <ul class="contact_with_socail">
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-            </ul>
-        </div>
-    </section>
+    {% get_connect_us %}
 {% endblock connect-us %}
 
 {% block footer-area %}
-<footer class="footer_area">
-        <div class="container">
-            <div class="footer_inner row">
-                <div class="col-lg-5 col-md-6 footer_logo">
-                    <a href="index.html"><img src="{% static "heldler/images/logo.png" %}" alt=""></a>
-                    <p>Established in 2013 as the first cloud mining provider, Blog has become a multi-functional Blog  Categories, trusted by over a million users.</p>
-                    <address>
-                        <span>LOCATION</span>
-                        <p>12/4  New Yourk R Block  Street 2101 USA</p>
-                    </address>
-                </div>
-
-                <div class="col-lg-5 col-md-6">
-                   <div class="subscribe">
-                        <h4>Subscribe</h4>
-                        <p>Sign up for our mailing list to get latest updates and offers</p>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="">
-                            <div class="input-group-append">
-                                <span class="input-group-text"><i class="fa fa-paper-plane"></i></span>
-                            </div>
-                        </div>
-                        <h6>Working Hours :  Monday-Saturday <span>Close : Sunday</span></h6>
-                   </div>
-                </div>
-
-                <div class="col-lg-2 col-md-3 resources">
-                    <h4>Short Link</h4>
-                    <ul class="resources_list">
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="#">Bug  Bounty Program</a></li>
-                        <li><a href="#">Policy</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="shop.html">Shop</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="copy_right">
-            <p>Copyright © 2018 <a href="#">Mora</a> Developed by <a href="http://www.bootstrapmb.com/">Themazin</a></p>
-        </div>
-    </footer>
+    {% get_foot_area %}
 {% endblock footer-area %}
