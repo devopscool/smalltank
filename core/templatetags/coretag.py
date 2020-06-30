@@ -77,3 +77,26 @@ def get_news_area(number=3, template='core/tags/news_area.html'):
     return {'template': template,
             'entry_news': Entry.published.filter(
                 as_news=1)[:number]}
+
+
+@register.inclusion_tag('core/tags/swap.html')
+def get_top_header(template='core/tags/top_header.html'):
+    """
+    Return the left middle post entries
+    """
+    return {'template': template}
+
+
+@register.inclusion_tag('core/tags/swap.html')
+def get_main_header(template='core/tags/main_header.html'):
+    """
+    Return the left middle post entries
+    """
+    return {'template': template}
+
+@register.inclusion_tag('core/tags/swap.html')
+def get_breadcrumb(template='core/tags/breadcrumb.html'):
+    """
+    Return the left middle post entries
+    """
+    return {'template': template}

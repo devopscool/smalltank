@@ -1,1 +1,14 @@
 {% extends "core/base.html" %}
+{% load coretag %}
+
+{% block header-info %}
+{% get_top_header %}
+{% endblock header-info %}
+
+{% block main-header-area %}
+{% get_main_header %}
+{% endblock main-header-area %}
+
+{% block content %}
+{% get_breadcrumb %}
+{% endblock content %}
